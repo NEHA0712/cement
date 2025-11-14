@@ -1,0 +1,14 @@
+body {
+    background-color: #eef2f7;
+}
+
+h1 {
+    color: #34495e;
+    font-weight: 700;
+    text-align: center;
+}
+
+button {
+    background-color: #1abc9c !important;
+    color: white !important;
+}
