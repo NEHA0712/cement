@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load XGBoost model
-with open("model.pkl", "rb") as file:
+with open("data.pkl", "rb") as file:
     model = pickle.load(file)
 
 st.set_page_config(page_title="Concrete Strength Predictor", layout="wide")
