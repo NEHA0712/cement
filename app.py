@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-# Load trained model
-with open("data.pkl", "rb") as file:
+# Load XGBoost model
+with open("model.pkl", "rb") as file:
     model = pickle.load(file)
 
 st.set_page_config(page_title="Concrete Strength Predictor", layout="wide")
@@ -12,11 +12,11 @@ st.set_page_config(page_title="Concrete Strength Predictor", layout="wide")
 with open("assets/style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title("🧱 Concrete Compressive Strength Prediction App")
+st.title("🧱 Concrete Compressive Strength Prediction App (XGBoost Model)")
 
-st.markdown("Enter the values below to predict the concrete strength (MPa):")
+st.markdown("Enter concrete mixture values below:")
 
-# Inputs
+# User inputs
 cement = st.number_input("Cement (kg/m³)", min_value=0.0)
 slag = st.number_input("Blast Furnace Slag (kg/m³)", min_value=0.0)
 flyash = st.number_input("Fly Ash (kg/m³)", min_value=0.0)
